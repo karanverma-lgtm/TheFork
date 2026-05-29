@@ -13,10 +13,10 @@ export default function Marquee({ items, direction = "left", speed = 25 }: Marqu
   const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="relative w-full overflow-hidden border-y border-white/5 py-8 bg-[#08080a] select-none">
+    <div className="relative w-full overflow-hidden border-y border-zinc-200/60 py-8 bg-[#fdfbf7] select-none">
       {/* Edge fading gradients */}
-      <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#fdfbf7] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#fdfbf7] to-transparent z-10 pointer-events-none" />
 
       <motion.div
         className="flex whitespace-nowrap gap-16 w-max px-8"
@@ -32,7 +32,7 @@ export default function Marquee({ items, direction = "left", speed = 25 }: Marqu
         {duplicatedItems.map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-16 text-sm md:text-xl font-serif font-light tracking-[0.25em] text-zinc-400 uppercase"
+            className="flex items-center gap-16 text-sm md:text-xl font-serif font-light tracking-[0.25em] text-zinc-600 uppercase"
           >
             <span>{item}</span>
             <span className="w-2 h-2 rotate-45 bg-gold-500/40 inline-block shrink-0" />

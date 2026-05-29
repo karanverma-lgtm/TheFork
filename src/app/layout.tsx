@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#050505] text-[#f4f4f5] pb-24 md:pb-0 selection:bg-gold-500 selection:text-black">
+      <body className="min-h-full flex flex-col bg-white text-zinc-900 pb-24 md:pb-0 selection:bg-gold-500 selection:text-white">
         <ScrollProvider>
           {children}
         </ScrollProvider>

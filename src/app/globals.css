@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #f4f4f5;
+  --background: #ffffff;
+  --foreground: #18181b;
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 }
@@ -37,10 +37,10 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #e4e4e7;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -49,37 +49,37 @@ body {
 
 /* Custom Utility Classes */
 .glass {
-  background: rgba(10, 10, 10, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(24, 24, 27, 0.08);
 }
 
 .glass-light {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(24, 24, 27, 0.05);
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(188, 142, 59, 0.2);
+  text-shadow: 0 0 20px rgba(188, 142, 59, 0.1);
 }
 
 .border-glow {
-  box-shadow: 0 0 30px rgba(188, 142, 59, 0.05);
+  box-shadow: 0 0 30px rgba(188, 142, 59, 0.03);
 }
 
 .radial-glow {
-  background: radial-gradient(circle at center, rgba(188, 142, 59, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(188, 142, 59, 0.08) 0%, transparent 60%);
 }
 
 .luxury-gradient {
-  background: linear-gradient(135deg, #f5eedb 0%, #cca75c 50%, #835525 100%);
+  background: linear-gradient(135deg, #a2722e 0%, #bc8e3b 50%, #cca75c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .luxury-gradient-bg {
-  background: linear-gradient(135deg, #1c1917 0%, #0c0a09 100%);
+  background: linear-gradient(135deg, #fdfbf7 0%, #f5eedb 100%);
 }

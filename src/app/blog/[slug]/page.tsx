@@ -32,18 +32,18 @@ function DumpukhTimeline() {
   ];
 
   return (
-    <div className="my-12 p-6 sm:p-8 rounded-2xl border border-white/10 bg-[#09090b] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-48 h-48 bg-gold-950/10 blur-[60px] pointer-events-none" />
-      <h4 className="text-white font-serif text-lg font-medium mb-8 flex items-center gap-2">
+    <div className="my-12 p-6 sm:p-8 rounded-2xl border border-zinc-200/60 bg-zinc-50/90 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-48 h-48 bg-gold-200/10 blur-[60px] pointer-events-none" />
+      <h4 className="text-zinc-900 font-serif text-lg font-medium mb-8 flex items-center gap-2">
         <span className="w-2 h-2 bg-gold-500 rounded-full" />
         Awadhi Dumpukh Historical Timeline
       </h4>
-      <div className="relative border-l border-gold-500/20 ml-4 flex flex-col gap-8">
+      <div className="relative border-l border-gold-500/30 ml-4 flex flex-col gap-8">
         {steps.map((step, idx) => (
           <div key={idx} className="relative pl-8">
-            <div className="absolute -left-[9px] top-1 w-4.5 h-4.5 rounded-full bg-black border-2 border-gold-400 shadow-[0_0_10px_rgba(188,142,59,0.4)] flex items-center justify-center" />
-            <h5 className="text-white text-sm font-semibold font-sans uppercase tracking-wider">{step.title}</h5>
-            <p className="text-zinc-400 text-xs sm:text-sm font-light mt-1.5 leading-relaxed">{step.desc}</p>
+            <div className="absolute -left-[9px] top-1 w-4.5 h-4.5 rounded-full bg-white border-2 border-gold-500 shadow-sm flex items-center justify-center" />
+            <h5 className="text-zinc-900 text-sm font-semibold font-sans uppercase tracking-wider">{step.title}</h5>
+            <p className="text-zinc-600 text-xs sm:text-sm font-light mt-1.5 leading-relaxed">{step.desc}</p>
           </div>
         ))}
       </div>
@@ -61,8 +61,8 @@ function WeddingGantt() {
   ];
 
   return (
-    <div className="my-12 p-6 sm:p-8 rounded-2xl border border-white/10 bg-[#09090b] relative overflow-hidden">
-      <h4 className="text-white font-serif text-lg font-medium mb-8 flex items-center gap-2">
+    <div className="my-12 p-6 sm:p-8 rounded-2xl border border-zinc-200/60 bg-zinc-50/90 relative overflow-hidden">
+      <h4 className="text-zinc-900 font-serif text-lg font-medium mb-8 flex items-center gap-2">
         <span className="w-2 h-2 bg-gold-500 rounded-full" />
         Wedding Catering Planning Gantt
       </h4>
@@ -70,10 +70,10 @@ function WeddingGantt() {
         {phases.map((phase, idx) => (
           <div key={idx} className="flex flex-col gap-2">
             <div className="flex justify-between text-xs sm:text-sm">
-              <span className="text-zinc-200 font-medium">{phase.title}</span>
-              <span className="text-gold-400 font-mono">{phase.duration} ({phase.status})</span>
+              <span className="text-zinc-800 font-medium">{phase.title}</span>
+              <span className="text-gold-600 font-mono">{phase.duration} ({phase.status})</span>
             </div>
-            <div className="w-full h-2 rounded-full bg-white/5 overflow-hidden">
+            <div className="w-full h-2 rounded-full bg-zinc-200 overflow-hidden">
               <div 
                 className="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full" 
                 style={{ width: `${phase.progress}%` }}
@@ -91,13 +91,13 @@ function IceComparison() {
   return (
     <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Cloudy Ice */}
-      <SpotlightCard className="p-6 border border-white/5 bg-zinc-950/40" glowColor="rgba(239, 68, 68, 0.05)">
-        <div className="flex items-center gap-2 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">
+      <SpotlightCard className="p-6 border border-zinc-200/60 bg-zinc-50/90" glowColor="rgba(239, 68, 68, 0.03)">
+        <div className="flex items-center gap-2 text-red-600 text-xs font-semibold uppercase tracking-wider mb-4">
           <AlertTriangle className="w-4 h-4" />
           Standard Cloudy Ice
         </div>
-        <h4 className="text-white font-serif text-lg font-medium mb-3">Fast Freezing Process</h4>
-        <ul className="flex flex-col gap-3 text-xs text-zinc-400 font-light leading-relaxed">
+        <h4 className="text-zinc-900 font-serif text-lg font-medium mb-3">Fast Freezing Process</h4>
+        <ul className="flex flex-col gap-3 text-xs text-zinc-600 font-light leading-relaxed">
           <li>• Contains trapped gases, air bubbles, and minerals</li>
           <li>• Brittle structure that cracks easily when warm liquid is poured</li>
           <li>• Dilutes drinks in under 15 minutes, watering down flavor balance</li>
@@ -106,13 +106,13 @@ function IceComparison() {
       </SpotlightCard>
 
       {/* Clear Ice */}
-      <SpotlightCard className="p-6 border border-gold-500/20 bg-gold-950/5" glowColor="rgba(188, 142, 59, 0.15)">
-        <div className="flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+      <SpotlightCard className="p-6 border border-gold-500/20 bg-gold-50" glowColor="rgba(188, 142, 59, 0.08)">
+        <div className="flex items-center gap-2 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-4">
           <CheckCircle2 className="w-4 h-4" />
           The Fork's Crystal Clear Ice
         </div>
-        <h4 className="text-white font-serif text-lg font-medium mb-3">Directional Freezing Science</h4>
-        <ul className="flex flex-col gap-3 text-xs text-zinc-300 font-light leading-relaxed">
+        <h4 className="text-zinc-900 font-serif text-lg font-medium mb-3">Directional Freezing Science</h4>
+        <ul className="flex flex-col gap-3 text-xs text-zinc-700 font-light leading-relaxed">
           <li>• Pure boiled and filtered water removes all dissolved minerals</li>
           <li>• Directional freezing pushes air bubbles away, leaving crystal clarity</li>
           <li>• High density ice block melts up to 4x slower, preventing dilution</li>
@@ -132,21 +132,21 @@ function formatInlineMarkdown(text: string): React.ReactNode {
   return parts.map((part, idx) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={idx} className="text-white font-semibold">
+        <strong key={idx} className="text-zinc-900 font-semibold">
           {part.slice(2, -2)}
         </strong>
       );
     }
     if (part.startsWith("*") && part.endsWith("*")) {
       return (
-        <em key={idx} className="italic text-zinc-300 font-light">
+        <em key={idx} className="italic text-zinc-700 font-light">
           {part.slice(1, -1)}
         </em>
       );
     }
     if (part.startsWith("`") && part.endsWith("`")) {
       return (
-        <code key={idx} className="bg-white/5 border border-white/10 px-1.5 py-0.5 rounded font-mono text-xs text-gold-400">
+        <code key={idx} className="bg-zinc-50 border border-zinc-200 px-1.5 py-0.5 rounded font-mono text-xs text-gold-600">
           {part.slice(1, -1)}
         </code>
       );
@@ -172,12 +172,12 @@ function RenderTable({ content }: { content: string }) {
   const bodyRows = rows.slice(1);
 
   return (
-    <div className="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#09090b] shadow-xl">
+    <div className="my-8 overflow-x-auto rounded-xl border border-zinc-200/60 bg-zinc-50/90 shadow-sm">
       <table className="w-full text-left border-collapse">
         <thead>
-          <tr className="border-b border-white/10 bg-white/5">
+          <tr className="border-b border-zinc-200/60 bg-zinc-100/50">
             {headers.map((th, idx) => (
-              <th key={idx} className="p-4 text-xs font-semibold uppercase tracking-wider text-gold-400 font-sans">
+              <th key={idx} className="p-4 text-xs font-semibold uppercase tracking-wider text-gold-600 font-sans">
                 {formatInlineMarkdown(th)}
               </th>
             ))}
@@ -185,9 +185,9 @@ function RenderTable({ content }: { content: string }) {
         </thead>
         <tbody>
           {bodyRows.map((row, rIdx) => (
-            <tr key={rIdx} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <tr key={rIdx} className="border-b border-zinc-200/40 hover:bg-zinc-100/45 transition-colors">
               {row.map((cell, cIdx) => (
-                <td key={cIdx} className="p-4 text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
+                <td key={cIdx} className="p-4 text-xs sm:text-sm text-zinc-700 font-light leading-relaxed">
                   {formatInlineMarkdown(cell)}
                 </td>
               ))}
@@ -207,14 +207,14 @@ export default async function BlogPostPage({ params }: PageProps) {
     return (
       <>
         <Navbar />
-        <main className="flex-grow bg-[#050505] text-[#f4f4f5] pt-40 pb-32 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-3xl font-serif text-white mb-4">Article Not Found</h1>
-          <p className="text-zinc-400 text-sm max-w-sm leading-relaxed mb-8">
+        <main className="flex-grow bg-white text-zinc-900 pt-40 pb-32 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-3xl font-serif text-zinc-900 mb-4">Article Not Found</h1>
+          <p className="text-zinc-600 text-sm max-w-sm leading-relaxed mb-8">
             The culinary article you are looking for has been moved or does not exist.
           </p>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase px-6 py-3 rounded-full hover:bg-gold-400 transition-colors"
+            className="inline-flex items-center gap-2 bg-zinc-900 text-white font-semibold text-xs tracking-widest uppercase px-6 py-3 rounded-full hover:bg-gold-500 hover:text-white transition-colors border border-zinc-800"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
@@ -261,7 +261,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       
       // 2. Render actual separators
       if (trimmedLine.startsWith("---") || trimmedLine.startsWith("***")) {
-        elements.push(<hr key={i} className="my-10 border-t border-white/5" />);
+        elements.push(<hr key={i} className="my-10 border-t border-zinc-200/60" />);
         i++;
         continue;
       }
@@ -269,7 +269,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       // 3. Render Headings
       if (trimmedLine.startsWith("###")) {
         elements.push(
-          <h4 key={i} className="text-xl font-serif text-white font-medium tracking-wide mt-8 pt-4">
+          <h4 key={i} className="text-xl font-serif text-zinc-900 font-medium tracking-wide mt-8 pt-4">
             {formatInlineMarkdown(trimmedLine.replace("###", "").trim())}
           </h4>
         );
@@ -280,7 +280,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       // Special FAQ section parser
       if (trimmedLine.startsWith("## FAQ")) {
         elements.push(
-          <h3 key={i} className="text-2xl font-serif text-white font-semibold tracking-wide mt-12 pt-6 border-t border-white/5 mb-6">
+          <h3 key={i} className="text-2xl font-serif text-zinc-900 font-semibold tracking-wide mt-12 pt-6 border-t border-zinc-200/60 mb-6">
             {formatInlineMarkdown(trimmedLine.replace("##", "").trim())}
           </h3>
         );
@@ -325,7 +325,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       
       if (trimmedLine.startsWith("##")) {
         elements.push(
-          <h3 key={i} className="text-2xl font-serif text-white font-semibold tracking-wide mt-12 pt-6 border-t border-white/5">
+          <h3 key={i} className="text-2xl font-serif text-zinc-900 font-semibold tracking-wide mt-12 pt-6 border-t border-zinc-200/60">
             {formatInlineMarkdown(trimmedLine.replace("##", "").trim())}
           </h3>
         );
@@ -359,7 +359,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             elements.push(component);
           } else {
             elements.push(
-              <pre key={i} className="bg-[#09090b] border border-white/10 p-5 rounded-xl font-mono text-[10px] sm:text-xs overflow-x-auto text-zinc-400 leading-relaxed my-6">
+              <pre key={i} className="bg-zinc-50 border border-zinc-200 p-5 rounded-xl font-mono text-[10px] sm:text-xs overflow-x-auto text-zinc-600 leading-relaxed my-6">
                 {codeLines.join("\n")}
               </pre>
             );
@@ -367,7 +367,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         } else {
           // Render ASCII layouts in a styled monospace box
           elements.push(
-            <pre key={i} className="bg-[#09090b] border border-white/10 p-5 rounded-xl font-mono text-[10px] sm:text-xs overflow-x-auto text-zinc-400 leading-relaxed my-6">
+            <pre key={i} className="bg-zinc-50 border border-zinc-200 p-5 rounded-xl font-mono text-[10px] sm:text-xs overflow-x-auto text-zinc-600 leading-relaxed my-6">
               {codeLines.join("\n")}
             </pre>
           );
@@ -395,7 +395,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         }
         
         elements.push(
-          <ul key={i} className="list-disc list-inside space-y-2.5 text-zinc-400 pl-4 my-6">
+          <ul key={i} className="list-disc list-inside space-y-2.5 text-zinc-600 pl-4 my-6">
             {listItems.map((li, lidx) => {
               const cleanedLi = li.replace(/^-/, "").trim();
               return (
@@ -411,7 +411,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       
       // 7. Render Paragraphs
       elements.push(
-        <p key={i} className="whitespace-pre-line text-zinc-300 font-light leading-relaxed text-sm sm:text-base my-4">
+        <p key={i} className="whitespace-pre-line text-zinc-700 font-light leading-relaxed text-sm sm:text-base my-4">
           {formatInlineMarkdown(line)}
         </p>
       );
@@ -425,16 +425,16 @@ export default async function BlogPostPage({ params }: PageProps) {
     <>
       <Navbar />
 
-      <main className="flex-grow bg-[#050505] text-[#f4f4f5] pt-36 pb-24 relative overflow-hidden">
+      <main className="flex-grow bg-white text-zinc-900 pt-36 pb-24 relative overflow-hidden">
         {/* Background glow */}
-        <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-gold-950/10 blur-[130px] pointer-events-none select-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-gold-200/10 blur-[130px] pointer-events-none select-none" />
 
         <div className="max-w-4xl mx-auto px-6 flex flex-col gap-8">
           {/* Back Navigation */}
-          <div className="border-b border-white/5 pb-6">
+          <div className="border-b border-zinc-200/60 pb-6">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-zinc-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-zinc-600 hover:text-black transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
@@ -443,7 +443,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Article Info */}
           <div className="flex flex-col gap-6">
-            <div className="flex flex-wrap gap-4 text-xs text-gold-500 uppercase tracking-widest font-sans font-medium">
+            <div className="flex flex-wrap gap-4 text-xs text-gold-600 uppercase tracking-widest font-sans font-medium">
               <span>{post.category}</span>
               <span>•</span>
               <span>{post.date}</span>
@@ -451,18 +451,18 @@ export default async function BlogPostPage({ params }: PageProps) {
               <span>{post.readTime}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-serif font-medium text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-serif font-medium text-zinc-900 tracking-tight leading-tight">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-3 text-sm text-zinc-400 font-light border-y border-white/5 py-4">
-              <User className="w-4 h-4 text-gold-400" />
+            <div className="flex items-center gap-3 text-sm text-zinc-600 font-light border-y border-zinc-200/60 py-4">
+              <User className="w-4 h-4 text-gold-600" />
               <span>Written by <strong>{post.author}</strong></span>
             </div>
           </div>
 
           {/* Cover Image */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] w-full border border-white/10 my-4 bg-zinc-900">
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] w-full border border-zinc-200/80 my-4 bg-zinc-100">
             <Image
               src={post.coverImage}
               alt={post.title}
@@ -473,22 +473,22 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* Body Content */}
-          <div className="prose prose-invert prose-gold max-w-none space-y-6">
+          <div className="prose prose-gold max-w-none space-y-6 text-zinc-800">
             {compileMarkdown()}
           </div>
 
           {/* Bottom CTA */}
-          <div className="border-t border-white/5 pt-12 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="border-t border-zinc-200/60 pt-12 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3 text-left">
-              <BookOpen className="w-8 h-8 text-gold-400 shrink-0" />
+              <BookOpen className="w-8 h-8 text-gold-600 shrink-0" />
               <div>
-                <p className="text-white font-serif font-medium text-sm">Need professional menu advice?</p>
-                <p className="text-[11px] text-zinc-500">Coordinate directly with our catering supervisors.</p>
+                <p className="text-zinc-900 font-serif font-medium text-sm">Need professional menu advice?</p>
+                <p className="text-[11px] text-zinc-600">Coordinate directly with our catering supervisors.</p>
               </div>
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase px-6 py-3.5 rounded-full hover:bg-gold-400 transition-colors"
+              className="inline-flex items-center gap-2 bg-zinc-900 text-white font-semibold text-xs tracking-widest uppercase px-6 py-3.5 rounded-full hover:bg-gold-500 hover:text-white transition-colors border border-zinc-800"
             >
               Consult Our Team
               <ArrowRight className="w-3.5 h-3.5" />

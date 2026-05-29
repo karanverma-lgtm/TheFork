@@ -11,7 +11,7 @@ interface SpotlightCardProps {
 export default function SpotlightCard({
   children,
   className = "",
-  glowColor = "rgba(188, 142, 59, 0.15)",
+  glowColor = "rgba(188, 142, 59, 0.08)",
 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -32,10 +32,10 @@ export default function SpotlightCard({
   const paddingClass = hasPadding ? "" : "p-6";
 
   const hasBorder = className.split(" ").some((c) => c.startsWith("border-"));
-  const borderClass = hasBorder ? "" : "border border-white/10";
+  const borderClass = hasBorder ? "" : "border border-zinc-200/60";
 
   const hasBg = className.split(" ").some((c) => c.startsWith("bg-"));
-  const bgClass = hasBg ? "" : "bg-[#0e0e11]/80";
+  const bgClass = hasBg ? "" : "bg-zinc-50/90";
 
   return (
     <div
@@ -43,7 +43,7 @@ export default function SpotlightCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative overflow-hidden rounded-2xl ${borderClass} ${bgClass} backdrop-blur-md ${paddingClass} transition-all duration-500 hover:border-white/20 ${className}`}
+      className={`relative overflow-hidden rounded-2xl ${borderClass} ${bgClass} backdrop-blur-md ${paddingClass} transition-all duration-500 hover:border-gold-500/30 ${className}`}
     >
       {/* Background radial glow that follows mouse */}
       <div

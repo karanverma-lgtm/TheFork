@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#09090b] border-t border-white/5 pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-[#fdfbf7] border-t border-zinc-200/60 pt-20 pb-10 overflow-hidden">
       {/* Background glow */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 radial-glow pointer-events-none opacity-40" />
 
@@ -23,79 +23,79 @@ export default function Footer() {
               alt="The Fork Logo" 
               width={140} 
               height={45} 
-              className="object-contain invert"
+              className="object-contain"
             />
           </Link>
-          <p className="text-zinc-400 text-sm font-light max-w-sm leading-relaxed">
+          <p className="text-zinc-600 text-sm font-light max-w-sm leading-relaxed">
             Delivering elite 5-star culinary craftsmanship, ambiance design, and bespoke hospitality across major global event destinations.
           </p>
-          <div className="flex flex-col gap-3 mt-2 text-sm text-zinc-400 font-light">
+          <div className="flex flex-col gap-3 mt-2 text-sm text-zinc-600 font-light">
             <div className="flex items-center gap-3">
-              <MapPin className="w-4 h-4 text-gold-400 shrink-0" />
+              <MapPin className="w-4 h-4 text-gold-500 shrink-0" />
               <span>Farm No. 1, Baghwani Nursery Jonapur, Chatarpur New Delhi - 110047</span>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+              <Phone className="w-4 h-4 text-gold-500 shrink-0" />
               <div className="flex gap-2">
-                <a href="tel:+919958032617" className="hover:text-gold-400 transition-colors">+91 99580 32617</a>
+                <a href="tel:+919958032617" className="hover:text-gold-500 transition-colors">+91 99580 32617</a>
                 <span>/</span>
-                <a href="tel:+919718525601" className="hover:text-gold-400 transition-colors">+91 97185 25601</a>
+                <a href="tel:+919718525601" className="hover:text-gold-500 transition-colors">+91 97185 25601</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-gold-400 shrink-0" />
-              <a href="mailto:thefork16@gmail.com" className="hover:text-gold-400 transition-colors">thefork16@gmail.com</a>
+              <Mail className="w-4 h-4 text-gold-500 shrink-0" />
+              <a href="mailto:thefork16@gmail.com" className="hover:text-gold-500 transition-colors">thefork16@gmail.com</a>
             </div>
           </div>
         </div>
 
         {/* Quick Links */}
         <div className="flex flex-col gap-6">
-          <h4 className="font-serif text-gold-300 text-lg font-medium tracking-wide">Explore</h4>
-          <ul className="flex flex-col gap-3 text-sm text-zinc-400 font-light">
+          <h4 className="font-serif text-gold-700 text-lg font-medium tracking-wide">Explore</h4>
+          <ul className="flex flex-col gap-3 text-sm text-zinc-600 font-light">
             <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/" className="hover:text-black transition-colors">Home</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
+              <Link href="/about" className="hover:text-black transition-colors">About Us</Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/services" className="hover:text-black transition-colors">Services</Link>
             </li>
             <li>
-              <Link href="/features" className="hover:text-white transition-colors">Cuisines</Link>
+              <Link href="/features" className="hover:text-black transition-colors">Cuisines</Link>
             </li>
             <li>
-              <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+              <Link href="/pricing" className="hover:text-black transition-colors">Pricing</Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:text-white transition-colors">Culinary Blog</Link>
+              <Link href="/blog" className="hover:text-black transition-colors">Culinary Blog</Link>
             </li>
           </ul>
         </div>
 
         {/* Global Reach */}
         <div className="flex flex-col gap-6">
-          <h4 className="font-serif text-gold-300 text-lg font-medium tracking-wide">Regional Footprint</h4>
-          <ul className="flex flex-col gap-4 text-sm text-zinc-400 font-light">
+          <h4 className="font-serif text-gold-700 text-lg font-medium tracking-wide">Regional Footprint</h4>
+          <ul className="flex flex-col gap-4 text-sm text-zinc-600 font-light">
             <li className="flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-gold-400" />
+              <Compass className="w-4 h-4 text-gold-500" />
               <div>
-                <p className="text-white font-medium text-xs">New Delhi, India</p>
+                <p className="text-zinc-900 font-medium text-xs">New Delhi, India</p>
                 <p className="text-[11px] text-zinc-500">Corporate HQ & Premium Kitchens</p>
               </div>
             </li>
             <li className="flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-gold-400" />
+              <Compass className="w-4 h-4 text-gold-500" />
               <div>
-                <p className="text-white font-medium text-xs">Thailand</p>
+                <p className="text-zinc-900 font-medium text-xs">Thailand</p>
                 <p className="text-[11px] text-zinc-500">Destination Weddings & Socials</p>
               </div>
             </li>
             <li className="flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-gold-400" />
+              <Compass className="w-4 h-4 text-gold-500" />
               <div>
-                <p className="text-white font-medium text-xs">Ahmedabad & Dehradun</p>
+                <p className="text-zinc-900 font-medium text-xs">Ahmedabad & Dehradun</p>
                 <p className="text-[11px] text-zinc-500">Regional Events & Conventions</p>
               </div>
             </li>
@@ -104,25 +104,25 @@ export default function Footer() {
       </div>
 
       {/* Decorative Large Text */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-        <p className="text-zinc-600 text-xs font-light tracking-wide text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-zinc-200/60 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+        <p className="text-zinc-500 text-xs font-light tracking-wide text-center md:text-left">
           © {new Date().getFullYear()} The Fork Luxury Catering Services. All Rights Reserved. 
-          <span className="block sm:inline sm:ml-2 text-[10px] text-zinc-700 uppercase tracking-widest">
+          <span className="block sm:inline sm:ml-2 text-[10px] text-zinc-400 uppercase tracking-widest">
             Design inspired by Apple & Vercel
           </span>
         </p>
 
         <button
           onClick={scrollToTop}
-          className="group flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-zinc-400 hover:text-white transition-colors"
+          className="group flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-zinc-500 hover:text-black transition-colors"
         >
           Back to Top
           <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </button>
       </div>
 
-      <div className="w-full text-center mt-12 select-none pointer-events-none opacity-[0.02]">
-        <h2 className="text-[8vw] font-serif font-bold tracking-[0.2em] text-white leading-none uppercase">
+      <div className="w-full text-center mt-12 select-none pointer-events-none opacity-[0.03]">
+        <h2 className="text-[8vw] font-serif font-bold tracking-[0.2em] text-zinc-300 leading-none uppercase">
           THE FORK
         </h2>
       </div>

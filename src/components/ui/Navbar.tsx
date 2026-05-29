@@ -43,7 +43,7 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "py-4 bg-[#050505]/75 backdrop-blur-md border-b border-white/5"
+            ? "py-4 bg-white/80 backdrop-blur-md border-b border-zinc-200/50"
             : "py-6 bg-transparent"
         }`}
       >
@@ -56,7 +56,7 @@ export default function Navbar() {
                 alt="The Fork Logo" 
                 width={120} 
                 height={40} 
-                className="object-contain invert transition-transform duration-300 group-hover:scale-[1.02]"
+                className="object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 priority
               />
             </Link>
@@ -70,13 +70,13 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-sm font-light tracking-wide text-zinc-400 hover:text-white transition-colors py-2"
+                  className="relative text-sm font-light tracking-wide text-zinc-600 hover:text-black transition-colors py-2"
                 >
                   {link.name}
                   {isActive && (
                     <motion.span
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 w-full h-[1px] bg-gold-400"
+                      className="absolute bottom-0 left-0 w-full h-[1px] bg-gold-500"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -89,7 +89,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold bg-white text-black px-5 py-2.5 rounded-full hover:bg-gold-400 hover:text-black transition-colors duration-300 border border-white/10"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold bg-zinc-900 text-white px-5 py-2.5 rounded-full hover:bg-gold-500 hover:text-white transition-colors duration-300 border border-zinc-800"
             >
               Enquire Now
               <ArrowRight className="w-3.5 h-3.5" />
@@ -100,11 +100,11 @@ export default function Navbar() {
 
       {/* Sticky Bottom Navigation Bar (Mobile View Only) */}
       <div className="md:hidden fixed bottom-6 left-4 right-4 z-40">
-        <div className="glass rounded-full px-5 py-3.5 flex items-center justify-between shadow-[0_-8px_30px_rgb(0,0,0,0.5)] border border-white/10 max-w-md mx-auto">
+        <div className="glass rounded-full px-5 py-3.5 flex items-center justify-between shadow-xl border border-zinc-200 max-w-md mx-auto">
           <Link
             href="/"
             className={`flex flex-col items-center gap-1.5 transition-colors ${
-              pathname === "/" ? "text-gold-400" : "text-zinc-400 hover:text-white"
+              pathname === "/" ? "text-gold-500" : "text-zinc-500 hover:text-black"
             }`}
           >
             <Home className="w-4.5 h-4.5" />
@@ -114,7 +114,7 @@ export default function Navbar() {
           <Link
             href="/services"
             className={`flex flex-col items-center gap-1.5 transition-colors ${
-              pathname === "/services" ? "text-gold-400" : "text-zinc-400 hover:text-white"
+              pathname === "/services" ? "text-gold-500" : "text-zinc-500 hover:text-black"
             }`}
           >
             <Sparkles className="w-4.5 h-4.5" />
@@ -124,7 +124,7 @@ export default function Navbar() {
           <Link
             href="/pricing"
             className={`flex flex-col items-center gap-1.5 transition-colors ${
-              pathname === "/pricing" ? "text-gold-400" : "text-zinc-400 hover:text-white"
+              pathname === "/pricing" ? "text-gold-500" : "text-zinc-500 hover:text-black"
             }`}
           >
             <Calculator className="w-4.5 h-4.5" />
@@ -134,7 +134,7 @@ export default function Navbar() {
           <Link
             href="/blog"
             className={`flex flex-col items-center gap-1.5 transition-colors ${
-              pathname === "/blog" ? "text-gold-400" : "text-zinc-400 hover:text-white"
+              pathname === "/blog" ? "text-gold-500" : "text-zinc-500 hover:text-black"
             }`}
           >
             <BookOpen className="w-4.5 h-4.5" />
@@ -144,7 +144,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(true)}
             className={`flex flex-col items-center gap-1.5 transition-colors ${
-              isOpen ? "text-gold-400" : "text-zinc-400 hover:text-white"
+              isOpen ? "text-gold-500" : "text-zinc-500 hover:text-black"
             }`}
           >
             <Menu className="w-4.5 h-4.5" />
@@ -160,7 +160,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md md:hidden flex flex-col justify-end"
+            className="fixed inset-0 z-50 bg-black/45 backdrop-blur-md md:hidden flex flex-col justify-end"
           >
             {/* Dismiss backdrop overlay click */}
             <div className="absolute inset-0" onClick={() => setIsOpen(false)} />
@@ -170,22 +170,22 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 200 }}
-              className="relative w-full bg-[#09090b] border-t border-white/10 rounded-t-3xl max-h-[85vh] overflow-y-auto p-6 z-10 flex flex-col gap-6 shadow-2xl"
+              className="relative w-full bg-white border-t border-zinc-200 rounded-t-3xl max-h-[85vh] overflow-y-auto p-6 z-10 flex flex-col gap-6 shadow-2xl"
             >
               {/* Header inside drawer */}
-              <div className="flex justify-between items-center border-b border-white/5 pb-4">
+              <div className="flex justify-between items-center border-b border-zinc-100 pb-4">
                 <Link href="/" onClick={() => setIsOpen(false)}>
                   <Image 
                     src="/lg-removebg-preview.png" 
                     alt="The Fork Logo" 
                     width={100} 
                     height={32} 
-                    className="object-contain invert"
+                    className="object-contain"
                   />
                 </Link>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
+                  className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-black hover:bg-zinc-100 transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -207,8 +207,8 @@ export default function Navbar() {
                         onClick={() => setIsOpen(false)}
                         className={`flex items-center justify-center text-center p-3.5 rounded-xl border text-xs tracking-wider uppercase font-medium transition-all ${
                           isActive
-                            ? "bg-gold-500/10 border-gold-500/30 text-gold-400"
-                            : "bg-white/5 border-white/5 text-zinc-400 hover:border-white/10 hover:text-white"
+                            ? "bg-gold-500/10 border-gold-500/30 text-gold-600"
+                            : "bg-zinc-50 border-zinc-100 text-zinc-600 hover:border-zinc-200 hover:text-black"
                         }`}
                       >
                         {link.name}
@@ -219,14 +219,14 @@ export default function Navbar() {
               </div>
 
               {/* Quick Contacts */}
-              <div className="flex flex-col gap-3.5 border-t border-white/5 pt-6">
+              <div className="flex flex-col gap-3.5 border-t border-zinc-100 pt-6">
                 <span className="text-zinc-500 text-[9px] uppercase tracking-widest font-semibold font-sans">
                   Direct Inquiries
                 </span>
                 <div className="flex flex-col gap-3">
                   <a
                     href="tel:+919958032617"
-                    className="flex items-center gap-3 text-xs text-zinc-300 hover:text-white font-light bg-white/5 p-3 rounded-xl border border-white/5"
+                    className="flex items-center gap-3 text-xs text-zinc-700 hover:text-black font-light bg-zinc-50 p-3 rounded-xl border border-zinc-100"
                   >
                     <PhoneCall className="w-4 h-4 text-gold-400" />
                     <span>+91 99580 32617</span>
@@ -242,7 +242,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="text-center text-[9px] text-zinc-600 tracking-wider mt-4">
+              <div className="text-center text-[9px] text-zinc-500 tracking-wider mt-4">
                 © {new Date().getFullYear()} The Fork Luxury Catering
               </div>
             </motion.div>

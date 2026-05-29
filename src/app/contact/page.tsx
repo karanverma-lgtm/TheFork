@@ -97,39 +97,39 @@ function ContactFormContent() {
       {/* Contact Information Column */}
       <div className="lg:col-span-5 flex flex-col gap-10">
         <div className="flex flex-col gap-6">
-          <h3 className="text-xl font-serif font-medium text-white">Direct Coordinates</h3>
-          <p className="text-zinc-400 text-xs font-light leading-relaxed">
+          <h3 className="text-xl font-serif font-medium text-zinc-900">Direct Coordinates</h3>
+          <p className="text-zinc-600 text-xs font-light leading-relaxed">
             Our supervisors respond to menu enquiries within 12 hours. Reach out directly or complete the event brief form.
           </p>
         </div>
 
         <div className="flex flex-col gap-6">
-          <SpotlightCard className="p-5 flex items-start gap-4 bg-[#09090b]">
-            <Phone className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+          <SpotlightCard className="p-5 flex items-start gap-4 bg-zinc-50/90 border border-zinc-200/60">
+            <Phone className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-white text-sm font-serif font-medium">Call Us</h4>
-              <div className="flex flex-col gap-1 mt-1 text-xs text-zinc-400 font-light">
-                <a href="tel:+919958032617" className="hover:text-gold-400 transition-colors">+91 99580 32617</a>
-                <a href="tel:+919718525601" className="hover:text-gold-400 transition-colors">+91 97185 25601</a>
+              <h4 className="text-zinc-900 text-sm font-serif font-medium">Call Us</h4>
+              <div className="flex flex-col gap-1 mt-1 text-xs text-zinc-600 font-light">
+                <a href="tel:+919958032617" className="hover:text-gold-600 transition-colors">+91 99580 32617</a>
+                <a href="tel:+919718525601" className="hover:text-gold-600 transition-colors">+91 97185 25601</a>
               </div>
             </div>
           </SpotlightCard>
 
-          <SpotlightCard className="p-5 flex items-start gap-4 bg-[#09090b]">
-            <Mail className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+          <SpotlightCard className="p-5 flex items-start gap-4 bg-zinc-50/90 border border-zinc-200/60">
+            <Mail className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-white text-sm font-serif font-medium">Email Us</h4>
-              <a href="mailto:thefork16@gmail.com" className="text-xs text-zinc-400 hover:text-gold-400 transition-colors mt-1 block font-light">
+              <h4 className="text-zinc-900 text-sm font-serif font-medium">Email Us</h4>
+              <a href="mailto:thefork16@gmail.com" className="text-xs text-zinc-600 hover:text-gold-600 transition-colors mt-1 block font-light">
                 thefork16@gmail.com
               </a>
             </div>
           </SpotlightCard>
 
-          <SpotlightCard className="p-5 flex items-start gap-4 bg-[#09090b]">
-            <MapPin className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+          <SpotlightCard className="p-5 flex items-start gap-4 bg-zinc-50/90 border border-zinc-200/60">
+            <MapPin className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-white text-sm font-serif font-medium">HQ Address</h4>
-              <p className="text-xs text-zinc-400 leading-relaxed mt-1 font-light">
+              <h4 className="text-zinc-900 text-sm font-serif font-medium">HQ Address</h4>
+              <p className="text-xs text-zinc-600 leading-relaxed mt-1 font-light">
                 Farm No. 1, Baghwani Nursery Jonapur, Chatarpur New Delhi - 110047
               </p>
             </div>
@@ -137,18 +137,18 @@ function ContactFormContent() {
         </div>
 
         {/* Global Locations Map Placeholder */}
-        <div className="relative rounded-2xl border border-white/5 bg-[#09090b] p-6 overflow-hidden flex flex-col gap-4">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gold-950/15 blur-[50px] pointer-events-none" />
-          <h4 className="text-white text-xs font-serif font-medium uppercase tracking-wider flex items-center gap-2">
-            <Compass className="w-4 h-4 text-gold-400 animate-spin-slow" />
+        <div className="relative rounded-2xl border border-zinc-200/60 bg-zinc-50/90 p-6 overflow-hidden flex flex-col gap-4">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gold-200/10 blur-[50px] pointer-events-none" />
+          <h4 className="text-zinc-900 text-xs font-serif font-medium uppercase tracking-wider flex items-center gap-2">
+            <Compass className="w-4 h-4 text-gold-600 animate-spin-slow" />
             International catering Operations
           </h4>
-          <p className="text-zinc-500 text-[11px] font-light leading-relaxed">
+          <p className="text-zinc-600 text-[11px] font-light leading-relaxed">
             In addition to Delhi NCR, The Fork actively operates professional kitchen units and destination catering coordination in:
           </p>
           <div className="flex flex-wrap gap-2 mt-1">
             {["Thailand", "Ahmedabad", "Dehradun"].map((loc) => (
-              <span key={loc} className="text-[10px] text-gold-400 bg-gold-950/20 border border-gold-500/10 px-3 py-1 rounded-full uppercase tracking-wider font-medium">
+              <span key={loc} className="text-[10px] text-gold-700 bg-gold-50 border border-gold-500/20 px-3 py-1 rounded-full uppercase tracking-wider font-medium">
                 {loc}
               </span>
             ))}
@@ -157,8 +157,8 @@ function ContactFormContent() {
       </div>
 
       {/* Enquiry Form Column */}
-      <div className="lg:col-span-7 rounded-2xl border border-white/5 bg-[#09090b] p-6 sm:p-10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gold-950/10 blur-[80px] pointer-events-none" />
+      <div className="lg:col-span-7 rounded-2xl border border-zinc-200/60 bg-[#fdfbf7] p-6 sm:p-10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gold-200/10 blur-[80px] pointer-events-none" />
         
         <AnimatePresence mode="wait">
           {success ? (
@@ -168,16 +168,16 @@ function ContactFormContent() {
               exit={{ opacity: 0 }}
               className="flex flex-col items-center text-center py-12 gap-6"
             >
-              <CheckCircle className="w-16 h-16 text-gold-400" />
+              <CheckCircle className="w-16 h-16 text-gold-600" />
               <div className="flex flex-col gap-2">
-                <h3 className="text-2xl font-serif font-medium text-white">Enquiry Received</h3>
-                <p className="text-zinc-400 text-sm font-light max-w-sm leading-relaxed mt-1">
+                <h3 className="text-2xl font-serif font-medium text-zinc-900">Enquiry Received</h3>
+                <p className="text-zinc-600 text-sm font-light max-w-sm leading-relaxed mt-1">
                   {successMsg}
                 </p>
               </div>
               <button
                 onClick={() => setSuccess(null)}
-                className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold bg-white text-black px-6 py-3 rounded-full hover:bg-gold-400 transition-colors"
+                className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold bg-zinc-900 text-white px-6 py-3 rounded-full hover:bg-gold-500 hover:text-white transition-colors border border-zinc-800"
               >
                 Send Another Message
               </button>
@@ -190,12 +190,12 @@ function ContactFormContent() {
               onSubmit={handleSubmit}
               className="flex flex-col gap-6 relative z-10"
             >
-              <h3 className="text-xl font-serif font-medium text-white border-b border-white/5 pb-4">
+              <h3 className="text-xl font-serif font-medium text-zinc-900 border-b border-zinc-200/60 pb-4">
                 Submit Event Details
               </h3>
 
               {errorMsg && (
-                <div className="p-4 rounded-xl bg-red-950/20 border border-red-500/25 text-red-300 text-xs font-light">
+                <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-light">
                   {errorMsg}
                 </div>
               )}
@@ -203,7 +203,7 @@ function ContactFormContent() {
               {/* Name & Email Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Full Name *</label>
+                  <label htmlFor="name" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Full Name *</label>
                   <input
                     type="text"
                     id="name"
@@ -212,12 +212,12 @@ function ContactFormContent() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your Name"
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Email Address *</label>
+                  <label htmlFor="email" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Email Address *</label>
                   <input
                     type="email"
                     id="email"
@@ -226,7 +226,7 @@ function ContactFormContent() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@domain.com"
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors"
                   />
                 </div>
               </div>
@@ -234,7 +234,7 @@ function ContactFormContent() {
               {/* Phone & Event Type Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="phone" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Phone Number *</label>
+                  <label htmlFor="phone" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Phone Number *</label>
                   <input
                     type="tel"
                     id="phone"
@@ -243,18 +243,18 @@ function ContactFormContent() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91-XXXXX-XXXXX"
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="eventType" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Event Type</label>
+                  <label htmlFor="eventType" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Event Type</label>
                   <select
                     id="eventType"
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleChange}
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors cursor-pointer text-zinc-300"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors cursor-pointer"
                   >
                     <option value="wedding">Wedding / Reception</option>
                     <option value="corporate">Corporate Lunch / Launch</option>
@@ -268,19 +268,19 @@ function ContactFormContent() {
               {/* Date & Guests Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="eventDate" className="text-xs text-zinc-400 font-medium uppercase tracking-wider font-sans">Event Date (Optional)</label>
+                  <label htmlFor="eventDate" className="text-xs text-zinc-600 font-medium uppercase tracking-wider font-sans">Event Date (Optional)</label>
                   <input
                     type="date"
                     id="eventDate"
                     name="eventDate"
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors text-zinc-400"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors text-zinc-800"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="guestCount" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Estimated Guests</label>
+                  <label htmlFor="guestCount" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Estimated Guests</label>
                   <input
                     type="number"
                     id="guestCount"
@@ -288,14 +288,14 @@ function ContactFormContent() {
                     value={formData.guestCount}
                     onChange={handleChange}
                     placeholder="e.g. 150"
-                    className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors"
                   />
                 </div>
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-xs text-zinc-400 font-medium uppercase tracking-wider">Your Message / Menu Outline</label>
+                <label htmlFor="message" className="text-xs text-zinc-600 font-medium uppercase tracking-wider">Your Message / Menu Outline</label>
                 <textarea
                   id="message"
                   name="message"
@@ -303,14 +303,14 @@ function ContactFormContent() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Outline your requirements..."
-                  className="w-full bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors resize-none font-light leading-relaxed"
+                  className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500 text-zinc-900 transition-colors resize-none font-light leading-relaxed"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-300 hover:to-gold-500 disabled:opacity-50 text-black font-bold text-xs tracking-widest uppercase py-4 rounded-xl transition-all duration-300"
+                className="w-full mt-4 flex items-center justify-center gap-2 bg-zinc-900 text-white hover:bg-gold-500 hover:text-white disabled:opacity-50 font-bold text-xs tracking-widest uppercase py-4 rounded-xl transition-all duration-300 border border-zinc-800"
               >
                 {loading ? (
                   <>
@@ -337,20 +337,20 @@ export default function Contact() {
     <>
       <Navbar />
 
-      <main className="flex-grow bg-[#050505] text-[#f4f4f5] pt-32 pb-24 relative overflow-hidden">
+      <main className="flex-grow bg-white text-zinc-900 pt-32 pb-24 relative overflow-hidden">
         {/* Background glow */}
-        <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-gold-950/15 blur-[120px] pointer-events-none select-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-gold-200/10 blur-[120px] pointer-events-none select-none" />
 
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-3xl flex flex-col gap-6 mb-20">
-            <span className="text-xs tracking-[0.3em] font-semibold text-gold-500 uppercase">Coordinate</span>
+            <span className="text-xs tracking-[0.3em] font-semibold text-gold-600 uppercase">Coordinate</span>
             <RevealText
               text="Let us Realize Your Next Memorable Occasion"
               as="h1"
-              className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium tracking-tight text-white leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium tracking-tight text-zinc-900 leading-tight"
             />
-            <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed">
+            <p className="text-zinc-600 font-light text-sm sm:text-base leading-relaxed">
               Based in Jonapur Chatarpur New Delhi, The Fork designs premium banqueting structures for weddings, cocktails, and product launches globally.
             </p>
           </div>

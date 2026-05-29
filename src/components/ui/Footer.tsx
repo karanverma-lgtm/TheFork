@@ -17,22 +17,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
         {/* Company Info */}
         <div className="md:col-span-2 flex flex-col gap-6">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/">
             <Image 
               src="/lg-removebg-preview.png" 
               alt="The Fork Logo" 
-              width={48} 
-              height={48} 
-              className="object-contain"
+              width={140} 
+              height={45} 
+              className="object-contain invert"
             />
-            <div className="flex flex-col">
-              <span className="font-serif text-3xl font-bold tracking-widest bg-gradient-to-r from-gold-100 via-gold-400 to-gold-700 bg-clip-text text-transparent leading-none">
-                THE FORK
-              </span>
-              <span className="text-[10px] tracking-[0.3em] font-sans text-gold-500 uppercase font-light mt-1.5">
-                Luxury Catering Services
-              </span>
-            </div>
           </Link>
           <p className="text-zinc-400 text-sm font-light max-w-sm leading-relaxed">
             Delivering elite 5-star culinary craftsmanship, ambiance design, and bespoke hospitality across major global event destinations.

@@ -49,21 +49,16 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo - Centered on mobile for premium app look, left-aligned on desktop */}
-          <div className="flex items-center gap-2 group w-full md:w-auto justify-center md:justify-start">
-            <Link href="/" className="flex items-center gap-2">
+          <div className="flex items-center group w-full md:w-auto justify-center md:justify-start">
+            <Link href="/">
               <Image 
                 src="/lg-removebg-preview.png" 
                 alt="The Fork Logo" 
-                width={36} 
-                height={36} 
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                width={120} 
+                height={40} 
+                className="object-contain invert transition-transform duration-300 group-hover:scale-[1.02]"
+                priority
               />
-              <span className="font-serif text-2xl font-bold tracking-widest bg-gradient-to-r from-gold-100 via-gold-400 to-gold-700 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity">
-                THE FORK
-              </span>
-              <span className="text-[10px] tracking-[0.25em] font-sans text-gold-500 uppercase font-light hidden sm:block mt-1">
-                Luxury Catering
-              </span>
             </Link>
           </div>
 
@@ -179,22 +174,14 @@ export default function Navbar() {
             >
               {/* Header inside drawer */}
               <div className="flex justify-between items-center border-b border-white/5 pb-4">
-                <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Link href="/" onClick={() => setIsOpen(false)}>
                   <Image 
                     src="/lg-removebg-preview.png" 
                     alt="The Fork Logo" 
-                    width={32} 
+                    width={100} 
                     height={32} 
-                    className="object-contain"
+                    className="object-contain invert"
                   />
-                  <div className="flex flex-col">
-                    <span className="font-serif text-xl font-bold tracking-widest bg-gradient-to-r from-gold-100 to-gold-400 bg-clip-text text-transparent">
-                      THE FORK
-                    </span>
-                    <span className="text-[8px] tracking-[0.2em] font-sans text-gold-500 uppercase font-light mt-0.5">
-                      Luxury Catering
-                    </span>
-                  </div>
                 </Link>
                 <button
                   onClick={() => setIsOpen(false)}

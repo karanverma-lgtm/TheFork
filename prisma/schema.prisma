@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Enquiry {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  phone       String
+  eventType   String   // e.g. Wedding, Reception, Corporate Lunch, Cocktail Dinner, etc.
+  eventDate   String?  // String to accommodate flexible inputs or DateTime format
+  guestCount  Int?
+  message     String?
+  createdAt   DateTime @default(now())
+
+  @@map("enquiries")
+}
+
+model BlogPost {
+  id         String   @id @default(uuid())
+  title      String
+  slug       String   @unique
+  content    String   @db.Text
+  summary    String
+  coverImage String?
+  category   String   // e.g. Culinary Secrets, Event Planning, Mixology
+  createdAt  DateTime @default(now())
+
+  @@map("blog_posts")
+}
+
+model Service {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  slug            String   @unique
+  description     String
+  longDescription String?  @db.Text
+  coverImage      String?
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+
+  @@map("services")
+}

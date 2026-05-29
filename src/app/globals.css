@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #f4f4f5;
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold-50: #fcf9f2;
+  --color-gold-100: #f5eedb;
+  --color-gold-200: #ebddb7;
+  --color-gold-300: #dcc58a;
+  --color-gold-400: #cca75c;
+  --color-gold-500: #bc8e3b;
+  --color-gold-600: #a2722e;
+  --color-gold-700: #835525;
+  --color-gold-800: #6b4422;
+  --color-gold-900: #5b391f;
+  --color-gold-950: #341e0f;
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bc8e3b;
+}
+
+/* Custom Utility Classes */
+.glass {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(188, 142, 59, 0.2);
+}
+
+.border-glow {
+  box-shadow: 0 0 30px rgba(188, 142, 59, 0.05);
+}
+
+.radial-glow {
+  background: radial-gradient(circle at center, rgba(188, 142, 59, 0.15) 0%, transparent 60%);
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, #f5eedb 0%, #cca75c 50%, #835525 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-gradient-bg {
+  background: linear-gradient(135deg, #1c1917 0%, #0c0a09 100%);
+}

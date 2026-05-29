@@ -98,6 +98,7 @@ export default function Navbar() {
         </div>
       </motion.header>
 
+
       {/* Sticky Bottom Navigation Bar (Mobile View Only) */}
       <div className="md:hidden fixed bottom-6 left-4 right-4 z-40">
         <div className="glass rounded-full px-5 py-3.5 flex items-center justify-between shadow-xl border border-zinc-200 max-w-md mx-auto">

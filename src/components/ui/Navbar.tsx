@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight, Home, Sparkles, Calculator, BookOpen, PhoneCall } from "lucide-react";
@@ -50,6 +51,13 @@ export default function Navbar() {
           {/* Logo - Centered on mobile for premium app look, left-aligned on desktop */}
           <div className="flex items-center gap-2 group w-full md:w-auto justify-center md:justify-start">
             <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/lg-removebg-preview.png" 
+                alt="The Fork Logo" 
+                width={36} 
+                height={36} 
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
+              />
               <span className="font-serif text-2xl font-bold tracking-widest bg-gradient-to-r from-gold-100 via-gold-400 to-gold-700 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity">
                 THE FORK
               </span>
@@ -171,14 +179,23 @@ export default function Navbar() {
             >
               {/* Header inside drawer */}
               <div className="flex justify-between items-center border-b border-white/5 pb-4">
-                <div className="flex flex-col">
-                  <span className="font-serif text-xl font-bold tracking-widest bg-gradient-to-r from-gold-100 to-gold-400 bg-clip-text text-transparent">
-                    THE FORK
-                  </span>
-                  <span className="text-[8px] tracking-[0.2em] font-sans text-gold-500 uppercase font-light mt-0.5">
-                    Luxury Catering
-                  </span>
-                </div>
+                <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                  <Image 
+                    src="/lg-removebg-preview.png" 
+                    alt="The Fork Logo" 
+                    width={32} 
+                    height={32} 
+                    className="object-contain"
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-serif text-xl font-bold tracking-widest bg-gradient-to-r from-gold-100 to-gold-400 bg-clip-text text-transparent">
+                      THE FORK
+                    </span>
+                    <span className="text-[8px] tracking-[0.2em] font-sans text-gold-500 uppercase font-light mt-0.5">
+                      Luxury Catering
+                    </span>
+                  </div>
+                </Link>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
